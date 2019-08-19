@@ -1,0 +1,38 @@
+
+<h1>
+  You need to install the following:
+  <button class="btn btn-danger">npm install ngx-order-pipe --save</button>
+</h1>
+
+<h4>Basic mat-select</h4>
+<div class="row">
+<div class="col-4">
+  <mat-form-field>
+    <mat-label>Select an Item</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let cat of search | orderBy:order:ascending" [value]="cat.name">
+        {{cat.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div><!--end col-->
+
+
+<div class="col-4">
+  <button class="btn btn-primary" (click)="search2()">Search</button>
+</div>
+<div class="col-4">
+  <ul *ngFor="let cat of search | orderBy:order:ascending">
+    <li>{{cat.name}}</li>
+    <!--<li>{{menuItem2.name}}</li>-->
+  </ul>
+</div>
+</div><!--end row-->
+
+<div class="row">
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY" size=10 maxlength=10  onkeyup="this.value=this.value.replace(/^(\d\d)(\d)$/g,'$1/$2').replace(/^(\d\d\/\d\d)(\d+)$/g,'$1/$2').replace(/[^\d\/]/g,'')">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div><!--endv row-->

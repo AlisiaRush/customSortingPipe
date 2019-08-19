@@ -7,8 +7,37 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
   <app-root></app-root>
 </body>
 </html>
+<!--IE is pain in the ass, so when the angular app does not show up...don't be suprised, don't bang your head into the wall, and don't throw your computer across the room. Simply following these instructions and you will be good to go.. So here it is:
+FIRST
+-Go to the polyfills.ts file and follow the instructions there for IE 11.
+1. Uncomment the import for classlist.js
+2. Run `npm install --save classlist.js`.
+3. npm install --save web-animations-js
+4. Go to the tsconfig.json file and change 'target' to es5 and lib to es2016
+
+For Example:
+ "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2016",
+      "dom"
+
+Ok! That's it! You should see the Angular app show up now in the IE browser. Now from here on, you will run into more stupid ass problems with IE beign slow when it comes to anything awesome, so don't be suprised. Simply do a million searches to find the answer like everything else when dealing with IE.
+
+-Lisa Rush
+
+-->
