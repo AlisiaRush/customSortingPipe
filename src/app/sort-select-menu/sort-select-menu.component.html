@@ -36,3 +36,17 @@
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 </div><!--endv row-->
+
+<div class="row">
+  <mat-form-field appearance="outline">
+    <mat-select [formControl]="searchSelectMultiCtrl" placeholder="Search" [multiple]="true" #multiSelect>
+      <ngx-mat-select-search [formControl]="searchSelectMultiFilterCtrl"
+       [placeholderLabel]="'Search'"
+       [noEntriesFoundLabel]="'no matches found'"
+       ></ngx-mat-select-search>
+      <mat-option *ngFor="let bank of filteredSearchMulti | async" [value]="bank">
+        {{bank.msName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div><!--row-->
