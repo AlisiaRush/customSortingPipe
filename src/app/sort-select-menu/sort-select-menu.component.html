@@ -44,7 +44,7 @@
        [placeholderLabel]="'Search'"
        [noEntriesFoundLabel]="'no matches found'"
        ></ngx-mat-select-search>
-      <mat-option *ngFor="let filteredSearches of filteredSearchMulti | async" [value]="bank">
+      <mat-option *ngFor="let filteredSearches of filteredSearchMulti | async" [value]="filteredSearches">
         {{filteredSearches.msName}}
       </mat-option>
     </mat-select>
