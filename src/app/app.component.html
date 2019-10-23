@@ -1,7 +1,17 @@
 
-<mat-toolbar color="primary">My App</mat-toolbar>
-<div class="container">
-  <app-sort-select-menu></app-sort-select-menu>
+<mat-toolbar color="primary">
+<div class="col-1">THE SOURCE</div>
+<div class="col-11">
+    <button mat-stroked-button><a routerLink="" >Home</a></button>
+    <button mat-stroked-button><a routerLink="sorting" >Sorting</a></button>
+    <button mat-stroked-button><a routerLink="datePicker" >Date Picker</a></button>
+    <button mat-stroked-button><a routerLink="tables" >Tables</a></button>
+    <button mat-stroked-button><a routerLink="tables" >Using Node JS</a></button>
 </div>
+</mat-toolbar>
 
+<div class="container">
+  <br />
+  <br />
 <router-outlet></router-outlet>
+</div>

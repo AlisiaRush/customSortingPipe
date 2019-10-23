@@ -33,6 +33,7 @@ export const SELECTED_SEARCHES: fillSearch[] = [
   styleUrls: ['./sort-select-menu.component.css']
 })
 export class SortSelectMenuComponent implements OnInit, AfterViewInit, OnDestroy {
+  title ='Sorting';
   search: any = []
   searchMulti = []
   order = "name";
@@ -57,6 +58,13 @@ export class SortSelectMenuComponent implements OnInit, AfterViewInit, OnDestroy
 
 
   ngOnInit() {
+
+    this.http.get('https://jsonplaceholder.typicode.com/users/')
+    .subscribe((data)=>{
+      this.search = data;
+      console.log(this.search);
+    });
+
    // set initial selection
    this.searchSelectMultiCtrl.setValue([this.fillSearches[10], this.fillSearches[11], this.fillSearches[12]]);
 
@@ -108,14 +116,6 @@ export class SortSelectMenuComponent implements OnInit, AfterViewInit, OnDestroy
       this.fillSearches.filter(msSearch => msSearch.msName.toLowerCase().indexOf(search) > -1)
     );
   }
-
-search2(){
-  this.http.get('https://jsonplaceholder.typicode.com/users/')
-  .subscribe((data)=>{
-    this.search = data;
-    console.log(this.search);
-  })
-}
 
 transform(array, orderBy, asc = true){
   if (!orderBy || orderBy.trim() == ""){
